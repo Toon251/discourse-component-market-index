@@ -39,11 +39,33 @@
     }
 
     &__title {
-        display: flex;
-        align-items: center;
-        font-size: var(--font-down-1);
-        text-align: center;
-        color: white;
+        display: flex; /* ใช้ Flexbox เพื่อจัดเรียงข้อมูล */
+        justify-content: space-between; /* เว้นระยะห่างระหว่างข้อมูล */
+        align-items: center; /* จัดตำแหน่งแนวตั้งให้อยู่ตรงกลาง */
+        padding: 10px 20px; /* เพิ่มช่องว่างภายใน */
+        background-color: #f8f9fa; /* สีพื้นหลัง */
+        border: 1px solid #ddd; /* ขอบบางๆ เพื่อให้ดูชัดเจน */
+        border-radius: 8px; /* ทำให้มุมของกล่องโค้ง */
+        font-family: Arial, sans-serif; /* ฟอนต์ที่อ่านได้ง่าย */
+        font-size: 16px;
+        color: #333; /* สีข้อความ */
+
+        span {
+            margin-right: 10px; // เพิ่มช่องว่างระหว่าง <span>
+        
+            &:nth-child(1), // SET
+            &:nth-child(3) { // MAI
+              font-weight: bold; // ตัวอักษรหนา
+              color: #007bff; // สีน้ำเงินเพื่อเน้นข้อความ
+            }
+        
+            &:nth-child(2), // ตัวเลข 1088.18
+            &:nth-child(4) { // ตัวเลข 227.14
+              font-weight: bold; // ตัวหนา
+              color: #28a745; // สีเขียว
+              font-size: 18px; // ขยายขนาดข้อความตัวเลข
+            }
+          }
     }
 
     &__button a {
