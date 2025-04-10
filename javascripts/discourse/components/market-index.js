@@ -28,7 +28,7 @@ export default class SubscriptionBar extends Component {
               method: "GET",
               headers: {
                   'Content-Type': 'application/json',
-                  "Authorization": `Bearer ${setting.apiKey}`,
+                  "Authorization": `Bearer ${settings.apiKey}`,
                   'Accept': 'application/json'
               }}
           );
